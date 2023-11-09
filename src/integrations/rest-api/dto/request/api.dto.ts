@@ -17,7 +17,7 @@ export class HttpRequestDto {
   @IsString()
   value: string;
 
-  @ApiProperty()
+  @ApiProperty({ example: 'GET' })
   @IsNotEmpty()
   @IsString()
   label: string;
@@ -40,7 +40,7 @@ export class SendRequestDto {
   @IsObject()
   httpMethod: HttpRequestDto;
 
-  @ApiProperty()
+  @ApiProperty({ example: 'https://jsonplaceholder.typicode.com/posts' })
   @IsString()
   httpUrl: string;
 
